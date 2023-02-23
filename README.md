@@ -2,7 +2,10 @@
 Automated individual tree detection with interactive quality control in R.
 
 ## Overview
-This script is a workflow that adds user interaction for quality control purposes to automated individual tree detection (ITD) algorithms available in the [lidR package for R](https://github.com/r-lidar/lidR). The user can inspect the automated ITD results and edit locations of detected treetops while the script is active, and the QC'd data is what is then used for further processing of tree count, tree height, and crown metrics. Manual corrections of the automated data allows for an operator to use their judgment and their knowledge of the study area to correct for Tpye I and Type II errors in tree detection.
+This script is a workflow that adds user interaction for quality control purposes to automated individual tree detection (ITD) algorithms available in the [lidR package for R](https://github.com/r-lidar/lidR). The user can inspect the automated ITD results and edit locations of detected treetops while the script is active, and the QC'd data is what is then used for further processing of tree count, tree height, and crown metrics. Manual corrections of the automated data allows for an operator to use their judgment and their knowledge of the study area to correct for Type I and Type II errors in tree detection.
+
+## Input data
+The script takes in an LAS file that has been classified (ground and non-ground) and normalized for height above ground. A number of software packages can perform these processing steps (e.g. [LASTools](https://rapidlasso.com/lastools/)). The path and filename for the input data are edited directly in the script.
 
 ## Example output data
 
@@ -35,4 +38,4 @@ treeID  Z       npoints  convhull_area  treeID  Z_smooth     X          Y
 
 ## Acknowledgements
 
-This work was supported by member companies of the University of Florida Forest Biology Re-search Cooperative (http://www.sfrc.ufl.edu/fbrc/) and U.S. Geological Survey Research Work Order #300.
+This work was supported by member companies of the University of Florida Forest Biology Research Cooperative (http://www.sfrc.ufl.edu/fbrc/) and U.S. Geological Survey Research Work Order #300.
